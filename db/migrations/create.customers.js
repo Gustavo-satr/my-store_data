@@ -1,6 +1,6 @@
 'use strict';
 
-const { CustomerSchema, CUSTOMER_TABLE } = require('./../models/customer.model');
+const { CustomerSchema, CUSTOMER_TABLE } = require('../models/customer.model');
 
 module.exports = {
   up: async (queryInterface) => {
@@ -8,6 +8,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.drop(CUSTOMER_TABLE);
+    await queryInterface.dropTable(CUSTOMER_TABLE);
   }
 };
